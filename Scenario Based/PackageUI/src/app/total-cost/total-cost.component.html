@@ -1,0 +1,33 @@
+<div class="heading container">
+    <h3>
+       Find Total Fare of A
+        <small class="text-muted">Tour</small>
+      </h3>
+    </div>
+    <div class="container">
+        
+        <form [formGroup]="totalFareForm" (ngSubmit)="handleSubmit()" data-toggle="validator" role="form">
+       
+    
+          <div class="mb-3">
+            <label for="exampleInputEmail2" class="form-label">Source Place</label>
+            <input formControlName="sourcePlace"   type="text" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" required>
+            
+          </div>
+    
+          <div class="mb-3">
+            <label for="exampleInputEmail3" class="form-label">Destination Place</label>
+            <input formControlName="destinationPlace"  type="text" class="form-control" id="exampleInputEmail3" aria-describedby="emailHelp" required>
+            
+          </div>
+    
+          <div class="mb-3">
+            <label for="exampleInputEmail4" class="form-label">Total Days</label>
+            <input formControlName="days"   type="number" class="form-control" id="exampleInputEmail4" aria-describedby="emailHelp" required>
+            
+          </div>
+        <button type="submit" class="btn btn-primary">Find A Package</button>
+        </form>
+    
+        <button routerLink="" class="btn btn-primary">Go Back</button>
+    </div>

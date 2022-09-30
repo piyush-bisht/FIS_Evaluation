@@ -1,0 +1,35 @@
+<div class="heading container">
+<h3>
+   Create A New Tour
+    <small class="text-muted">Package</small>
+  </h3>
+</div>
+<div class="container">
+    
+    <form [formGroup]="packageForm" (ngSubmit)="handleSubmit()" data-toggle="validator" role="form">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Package ID</label>
+        <input ng-model="package_id" formControlName="package_id"  type="text" class="form-control" name="package_id" id="package_id" aria-describedby="emailHelp" required minlength="7">
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail2" class="form-label">Source Place</label>
+        <input formControlName="sourcePlace"   type="text" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" required>
+        
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail3" class="form-label">Destination Place</label>
+        <input formControlName="destinationPlace"  type="text" class="form-control" id="exampleInputEmail3" aria-describedby="emailHelp" required>
+        
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail4" class="form-label">Basic Fare</label>
+        <input formControlName="basic_fare"   type="text" class="form-control" id="exampleInputEmail4" aria-describedby="emailHelp" required>
+        
+      </div>
+    <button type="submit" class="btn btn-primary">Create Package</button>
+    </form>
+    <button routerLink="" class="btn btn-primary">Go Back</button>
+</div>

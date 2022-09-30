@@ -1,0 +1,17 @@
+<div class="heading container">
+<button  class="btn btn-primary" (click)="handleAllPackages()">Get All Packages</button>
+</div>
+<div class="container">
+    
+   
+    <ol class="list-group list-group-numbered">
+        <li *ngFor="let p of allPackages" class="list-group-item d-flex justify-content-between align-items-start">
+          <div class="ms-2 me-auto fw-bold">{{p.sourcePlace}} -
+            <div class="fw-bold">{{p.destinationPlace}}</div>
+            
+          </div>
+          <span class="badge bg-primary rounded-pill">INR {{p.basic_fare}} /-</span>
+        </li>
+        </ol>
+        <button routerLink="" class="btn btn-primary">Go Back</button>
+</div>
